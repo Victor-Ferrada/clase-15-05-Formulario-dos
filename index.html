@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script src="app.js"></script>
+    <form name="formulario" id="formulario" onsubmit="prueba(this)">
+        Ingrese Nombre: <input type="text" name="nombre" id="nombre" required />
+        <br><br>
+        Ingrese Edad <input type="text" name="edad" id="edad"/>
+        <input type="submit" value="guardar"/>
+        <br><br>
+        <input type="button" onclick="reporte()" value="Suma"/>
+
+    </form>
+    <script>
+        document.getElementById("formulario").addEventListener("submit", function (event) {
+         event.preventDefault()
+         });
+        </script>
+</body>
+</html>
