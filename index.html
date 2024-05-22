@@ -8,13 +8,23 @@
 <body>
     <script src="app.js"></script>
     <form name="formulario" id="formulario" onsubmit="prueba(this)">
-        Ingrese Nombre: <input type="text" name="nombre" id="nombre" required />
+        Ingrese Nombre: <input type="text" name="nombre" id="nombre"  />
         <br><br>
-        Ingrese Edad <input type="text" name="edad" id="edad"/>
+        Ingrese nota 1: <input type="text" name="nota1" id="nota1"/>
+        <br><br>
+        Ingrese nota 2: <input type="text" name="nota2" id="nota2"/>
+        <br><br>
+        Ingrese nota 3: <input type="text" name="nota3" id="nota3"/>
+        <br><br>
         <input type="submit" value="guardar"/>
         <br><br>
-        <input type="button" onclick="reporte()" value="Suma"/>
-
+        <input type="button" onclick="reporte()" value="Promedio Alumno"/>
+        <br><br>
+        <input type="button" onclick="reporte2()" value="Promedio Curso">
+        <br><br>
+        <div id="resultado1"></div>
+        <br><br>
+        <div id="resultado2"></div>
     </form>
     <script>
         document.getElementById("formulario").addEventListener("submit", function (event) {
