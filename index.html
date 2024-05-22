@@ -3,33 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Formulario</title>
+    <link rel="stylesheet" href="estilos.css">
 </head>
 <body>
     <script src="app.js"></script>
-    <form name="formulario" id="formulario" onsubmit="prueba(this)">
-        Ingrese Nombre: <input type="text" name="nombre" id="nombre"  />
-        <br><br>
-        Ingrese nota 1: <input type="text" name="nota1" id="nota1"/>
-        <br><br>
-        Ingrese nota 2: <input type="text" name="nota2" id="nota2"/>
-        <br><br>
-        Ingrese nota 3: <input type="text" name="nota3" id="nota3"/>
-        <br><br>
-        <input type="submit" value="guardar"/>
-        <br><br>
-        <input type="button" onclick="reporte()" value="Promedio Alumno"/>
-        <br><br>
-        <input type="button" onclick="reporte2()" value="Promedio Curso">
-        <br><br>
+    <form class="form" class="yo" name="formulario" id="formulario" onsubmit="prueba(this)">
+        <h1>Notas Alumnos</h1>
+        <div class="grupo">
+            Nombre: <input type="text" name="nombre" id="nombre" placeholder="nombre del alumno" />
+        </div>
+        <div class="grupo">
+            Nota 1: <input type="text" name="nota1" id="nota1" placeholder='ejemplo "70 para un 7" '/>
+        </div>
+        <div class="grupo">
+            Nota 2: <input type="text" name="nota2" id="nota2" placeholder="ingrese segunda nota"/>
+        </div>
+        <div class="grupo">
+            Nota 3: <input type="text" name="nota3" id="nota3" placeholder="ingrese tercera nota"/>
+        </div>
+        <button type="submit" value="guardar">Guardar</button>
+        <button type="button" onclick="reporte()" value="Promedio Alumno">Promedio alumno</button>
+        <button input type="button" onclick="reporte2()" value="Promedio Curso"> Promedio Curso</button>
         <div id="resultado1"></div>
-        <br><br>
         <div id="resultado2"></div>
     </form>
     <script>
         document.getElementById("formulario").addEventListener("submit", function (event) {
-         event.preventDefault()
-         });
+        event.preventDefault()
+        });
         </script>
 </body>
 </html>
